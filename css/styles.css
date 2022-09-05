@@ -827,12 +827,12 @@ img {
 }
 
 .form-group {
+  position: relative;
+
   margin-bottom: 10px;
 }
 
 .modal-label {
-  position: relative;
-
   display: flex;
   flex-direction: column;
 
@@ -843,7 +843,10 @@ img {
 }
 
 .modal-input {
-  padding: 11px 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+  margin-top: 4px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -853,13 +856,14 @@ img {
 
 .modal-icon {
   position: absolute;
-  top: 25px;
+  bottom: 11px;
   left: 12px;
-  background-color: red;
+
+  transition: fill 250ms var(--animation);
 }
 
 .modal-comment {
-  margin: 0;
+  margin-top: 4px;
   padding: 12px 16px;
 
   min-height: 120px;
@@ -870,32 +874,68 @@ img {
   transition: border-color 250ms var(--animation);
 }
 
-/*placeholder-text ?????????
-  color: rgba(117, 117, 117, 0.5);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;*/
-
 .modal-input:hover,
-.modal-comment:hover {
+.modal-input:focus,
+.modal-comment:hover,
+.modal-comment:focus {
   border-color: var(--accent-color);
 }
 
+.modal-input:hover + .modal-icon {
+  fill: var(--accent-color);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--accent-color);
+}
+
 .checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 10px;
   margin-bottom: 30px;
 }
 
 .checkbox-label {
-  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.checkbox-input {
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  width: 1px;
+  height: 1px;
+
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 8px;
+
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  width: 16px;
+  height: 15px;
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  background-image: url(../images/check.svg);
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .modal-link {
