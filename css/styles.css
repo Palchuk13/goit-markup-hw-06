@@ -821,14 +821,20 @@ img {
   color: var(--title-text-color);
 }
 
-.form-group {
+.modal-form {
   display: flex;
   flex-direction: column;
+}
+
+.form-group {
   margin-bottom: 10px;
 }
 
 .modal-label {
-  margin-bottom: 4px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
 
   font-weight: 400;
   font-size: 12px;
@@ -843,6 +849,13 @@ img {
   border-radius: 4px;
 
   transition: border-color 250ms var(--animation);
+}
+
+.modal-icon {
+  position: absolute;
+  top: 25px;
+  left: 12px;
+  background-color: red;
 }
 
 .modal-comment {
@@ -873,14 +886,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
-
-/*.checkbox input[type='checkbox'] {
-  width: 16px;
-  height: 15px;
-}*/
 
 .checkbox-label {
   margin-left: 8px;
