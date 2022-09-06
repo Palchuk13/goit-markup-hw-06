@@ -444,7 +444,7 @@ img {
   border-radius: 50%;
   fill: var(--icon-color);
 
-  transition: color 250ms var(--animation), background-color 250ms var(--animation);
+  transition: fill 250ms var(--animation), background-color 250ms var(--animation);
 }
 
 .social-link:hover,
@@ -723,7 +723,8 @@ img {
   transition: transform 250ms var(--animation);
 }
 
-.card-link:hover .card-overlay {
+.card-link:hover .card-overlay,
+.card-link:focus .card-overlay {
   transform: translateY(0);
 }
 
@@ -750,7 +751,7 @@ img {
   background: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms var(--animation);
+  transition: opacity 250ms var(--animation), visibility 2500ms var(--animation);
 }
 
 .backdrop.is-hidden {
