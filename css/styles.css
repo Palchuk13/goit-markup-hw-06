@@ -125,6 +125,8 @@ img {
 
 .site-nav {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .site-nav .item + .item,
@@ -931,6 +933,8 @@ img {
   border-radius: 2px;
   width: 16px;
   height: 15px;
+
+  transition: box-shadow 250ms var(--animation);
 }
 
 .checkbox-input:checked + .checkbox-icon {
