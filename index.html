@@ -417,7 +417,15 @@
         <div class="footer-form">
           <p class="footer-dsc">Підпишіться на розсилку</p>
           <form class="signup-form" name="signup-form" autocomplete="on">
-            <input class="signup-input" type="email" name="email" id="email" placeholder="E-mail" />
+            <label id="email">
+              <input
+                class="signup-input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+            </label>
             <button class="button button-singup" type="submit">
               Підписатися
               <svg class="icon-send" width="24" height="24">
@@ -441,7 +449,7 @@
         <p class="modal-dsc">Залиште свої дані, ми вам передзвонимо</p>
         <form name="modal-form">
           <ul class="modal-form list">
-            <li class="form-group">
+            <li class="form-item">
               <label class="modal-label"
                 >Ім'я
 
@@ -451,7 +459,7 @@
                 </svg>
               </label>
             </li>
-            <li class="form-group">
+            <li class="form-item">
               <label class="modal-label"
                 >Телефон
                 <input class="modal-input" type="tel" name="tel" id="tel" />
@@ -460,7 +468,7 @@
                 </svg>
               </label>
             </li>
-            <li class="form-group">
+            <li class="form-item">
               <label class="modal-label"
                 >Пошта
 
@@ -470,7 +478,7 @@
                 </svg>
               </label>
             </li>
-            <li class="form-group">
+            <li class="form-item comment-item">
               <label class="modal-label"
                 >Коментар
                 <textarea
