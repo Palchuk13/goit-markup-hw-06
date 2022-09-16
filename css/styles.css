@@ -343,6 +343,8 @@ img {
 }
 
 .work-item {
+  position: relative;
+
   margin-right: var(--margin-gap);
 }
 
@@ -350,9 +352,6 @@ img {
   margin-right: 0;
 }
 
-.work-item {
-  position: relative;
-}
 .work-dsc {
   position: absolute;
   display: flex;
@@ -754,16 +753,16 @@ img {
   background: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms var(--animation), visibility 2500ms var(--animation);
+  transition: opacity 250ms var(--animation), visibility 250ms var(--animation);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.8);
 }
 
